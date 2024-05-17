@@ -7,7 +7,7 @@ import HeaderLiNavLink from './HeaderNavLink'
 import { IoMdClose } from 'react-icons/io'
 import { CiMenuFries } from 'react-icons/ci'
 
-const Header = memo(() => {
+const Header = () => {
     const [ativo, setAtivo] = useState(false)
 
     const toggle = () => {
@@ -60,6 +60,6 @@ const Header = memo(() => {
             </ContainerGlobal>
         </BGHeader>
     )
-})
+}
 
 export default Header
