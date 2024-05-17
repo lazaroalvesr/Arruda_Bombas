@@ -11,7 +11,7 @@ const Header = memo(() => {
     const [ativo, setAtivo] = useState(false)
 
     const toggle = () => {
-        setAtivo((prevState) => !prevState)
+        setAtivo((!ativo))
     }
 
     const handleResize = () => {
