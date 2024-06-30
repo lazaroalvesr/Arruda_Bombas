@@ -15,11 +15,11 @@ export const BGMain = styled.div`
 export const BGMainRight = styled.div`
   background: white;
     width: 50%;
-    height: 564px;
+    height: 568px;
     margin-top: -120px;
     position: absolute;
     right: 0;
-    top: 230px;
+    top: 220px;
     @media (min-width: 320px) and (max-width: 480px) {
     background: none;
 }  
@@ -35,11 +35,11 @@ export const BGContainer = styled.div`
 export const BGMainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 270px;
-  margin-left: 129px;
+  padding-top: 260px;
+  margin-left: 240px;
   @media (min-width: 320px) and (max-width: 480px) {
        margin: 22px;
-       padding-top: 240px;
+       padding-top: 200px;
     }  
     @media (min-width: 768px) and (max-width: 1024px) {
       margin-left: 48px;
@@ -54,6 +54,7 @@ export const BGMainTitle = styled.h2`
   display: flex;
   gap: 12px;
   font-size: 22px;
+  font-family: var(--type-poppins-regular);
   @media (min-width: 320px) and (max-width: 480px) {
       font-size: 18px;
     }  
@@ -63,11 +64,12 @@ export const BGMainTitle = styled.h2`
 `
 
 export const BgMainAbout = styled.p`
-  font-size: 48px;
+  font-size: 40px;
   padding-top: 14px;
   color: white;
   font-weight: bold;
   width: 480px;
+  font-family: var(--type-poppins-bold);
   @media (min-width: 320px) and (max-width: 480px) {
         font-size: 44px;
         width: 100%;
@@ -85,7 +87,8 @@ export const BGMainParagraph = styled.p`
   color: white;
   width: 440px;
   padding-top: 20px;
-  font-size: 16px;
+  font-size: 14px;
+  font-family: var(--type-poppins-regular);
   font-weight: normal;
   @media (min-width: 320px) and (max-width: 480px) {
        width: 100%;
@@ -105,10 +108,11 @@ export const BGMainContainerButton = styled.div`
 
 export const BgMainButton = styled.button`
   width: 200px;
-  background: transparent;
+  background: #1E1E1E;
   color: white;
   border: none;
-  border: 2px solid white;
+  border: 1px solid white;
+  font-family: var(--type-poppins-regular);
   border-radius: 15px;
   padding: 30px 20px;
   align-items: center;
@@ -136,10 +140,10 @@ export const BGMainRightIMG = styled.img`
   max-width: 100%;
   width: 647px;
   margin-left: 40px;
-  padding-top: 50px;
+  padding-top: 80px;
   @media (min-width: 320px) and (max-width: 480px) {
        margin-left: -150px;
-       margin-top: 280px;
+       margin-top: 250px;
        max-width: 300px;
     } 
     @media (min-width: 768px) and (max-width: 1024px) {

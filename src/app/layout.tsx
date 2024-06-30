@@ -1,14 +1,7 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
 import "./globals.css";
 import StyledComponentsRegistry from "@/lib/register";
-
-const roboto = Roboto({
-  weight: ['400', '700'],
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
-  display: 'swap',
-})
+import { PoppinsBold, PoppinsRegular } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Arruda Bombas",
@@ -27,10 +20,11 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="/img/Logo.png" type="image/png" />
       </head>
-      <body className={roboto.className}>
+      <body className={`${PoppinsRegular.variable} ${PoppinsBold.variable}`}>
         <StyledComponentsRegistry>
           {children}
-        </StyledComponentsRegistry></body>
+        </StyledComponentsRegistry>
+      </body>
     </html>
   );
 }
