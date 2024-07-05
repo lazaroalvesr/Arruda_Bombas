@@ -1,12 +1,18 @@
 import { ReactNode } from "react"
 
 
-export interface LinkProps{
+export interface LinkProps {
     href: string
-    isActive?: boolean
     children: ReactNode
 }
 
 export interface HeaderUlProps {
     ativo?: boolean
+}
+
+export interface CardProps {
+    href: string
+    src: string;
+    title: string;
+    about: string
 }

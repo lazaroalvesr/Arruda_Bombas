@@ -8,7 +8,7 @@ export const BGMain = styled.div`
     height: 688px;
     margin-top: -120px;
     @media (min-width: 320px) and (max-width: 480px) {
-       height: 850px;
+       height: 870px;
     } 
 `
 
@@ -36,7 +36,7 @@ export const BGMainContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 260px;
-  margin-left: 240px;
+  margin-left: 250px;
   @media (min-width: 320px) and (max-width: 480px) {
        margin: 22px;
        padding-top: 200px;
@@ -126,6 +126,7 @@ export const BgMainButton = styled.button`
     } 
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 160px;
+    font-size: 12.5px;
     }
 
     transition: transform 0.3s ease; 
@@ -148,7 +149,7 @@ export const BGMainRightIMG = styled.img`
     } 
     @media (min-width: 768px) and (max-width: 1024px) {
       margin-top: 120px;
-       max-width: 390px;
+       max-width: 370px;
        margin-left: 12px;
     }
 `

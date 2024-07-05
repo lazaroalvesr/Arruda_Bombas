@@ -4,7 +4,7 @@ import React from 'react'
 
 const LinkRedirect = ({ children, href }: LinkProps) => {
     return (
-        <Link href={href}>
+        <Link href={href} style={{textDecoration: 'none'}} target='_blank'>
             {children}
         </Link>
     )

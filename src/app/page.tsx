@@ -1,11 +1,15 @@
-import Header from "./_Components/Header";
+import { EmpresasParceiras } from "./_Components/EmpresasParceiras";
+import { Equipamentos } from "./_Components/Equipamentos";
 import Main from "./_Components/Main";
+import { Vendas } from "./_Components/Vendas";
 
 export default function Home() {
   return (
     <div>
-      <Header />
-      <Main/>
+      <Main />
+      <Equipamentos />
+      <Vendas />
+      <EmpresasParceiras />
     </div>
   );
 }

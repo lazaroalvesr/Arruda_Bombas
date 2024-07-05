@@ -11,12 +11,11 @@ export const BGHeader = styled.div`
     margin: auto;
     position: relative;
     z-index: 1;
-    height: 100px;
+    height: 80px;
     top: 50px;
     @media (min-width: 320px) and (max-width: 480px) {
         margin: 0px 10px;
-        height: 80px;
-    }  
+        }  
     @media (min-width: 768px) and (max-width: 1024px) {
         margin: 0px 30px;
     }
@@ -25,10 +24,10 @@ export const BGHeader = styled.div`
 export const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 15px 40px;
     align-items: center;
     @media (min-width: 320px) and (max-width: 480px) {
-        padding: 15px 20px;
+        padding: 16px 20px;
     } 
 `
 
@@ -38,8 +37,8 @@ export const HeaderIcon = styled.div`
 `
 
 export const HeaderImg = styled.img`
-    width: 68px;
-    height: 65px;
+    width: 53px;
+    height: 53px;
     @media (min-width: 320px) and (max-width: 480px) {
         width: 48px;
        height: 48px;
@@ -48,13 +47,16 @@ export const HeaderImg = styled.img`
 
 export const HeaderIconTitle = styled.p`
     font-weight: normal;
-    font-size: 28px;
+    font-size: 22px;
     padding-left: 8px;
     font-family: var(--type-poppins-regular);
-    width: 400;
+    font-weight: 400;
     @media (min-width: 320px) and (max-width: 480px) {
-        font-size: 22px;
+        font-size: 14px;
     }  
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 18px;
+    }
 `
 
 export const HeaderUl = styled.ul<HeaderUlProps>`
@@ -89,7 +91,8 @@ export const HeaderLi = styled.li`
     font-family: var(--type-poppins-regular);
     width: 400;
     font-weight: normal;
-    font-size: 18px;
+    cursor: pointer;
+    font-size: 16px;
     @media (min-width: 320px) and (max-width: 480px) {
         font-size: 24px;
     }  
