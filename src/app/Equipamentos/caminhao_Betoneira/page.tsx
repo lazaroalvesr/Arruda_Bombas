@@ -79,8 +79,8 @@ export default function PaginaCaminhaoBetoneira() {
                 <InformacoesBombas>
                     <InformacoesTitulo>Especificações</InformacoesTitulo>
                     <InformacoesItens>
-                        {Itens.map((item) => (
-                            <ItensText>
+                        {Itens.map((item,index) => (
+                            <ItensText key={index}>
                                 <IconeSelect src="/img/Select.png" />
                                 {item.nome}
                             </ItensText>
