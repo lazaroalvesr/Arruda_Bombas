@@ -15,6 +15,7 @@ export const BGHeader = styled.div`
     top: 50px;
     @media (min-width: 320px) and (max-width: 480px) {
         margin: 0px 10px;
+        top: 30px;
         }  
     @media (min-width: 768px) and (max-width: 1024px) {
         margin: 0px 30px;
@@ -89,7 +90,7 @@ export const HeaderLi = styled.li`
     display: flex;
     gap: 40px;
     font-family: var(--type-poppins-regular);
-    width: 400;
+    font-weight: 400;
     font-weight: normal;
     cursor: pointer;
     font-size: 16px;

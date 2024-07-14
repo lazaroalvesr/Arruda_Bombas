@@ -16,3 +16,13 @@ export interface CardProps {
     title: string;
     about: string
 }
+
+interface Image {
+    id: number;
+    images: string;
+}
+
+
+export interface GaleriaFotos{
+    images: Image[];
+}
