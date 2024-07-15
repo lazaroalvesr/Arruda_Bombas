@@ -15,6 +15,7 @@ export const FooterContainer = styled.div`
         }  
         @media (min-width: 768px) and (max-width: 1024px) {
             margin-top: 200px;
+            margin-left: 20px;
     }
 `
 

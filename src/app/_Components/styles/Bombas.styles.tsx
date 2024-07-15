@@ -9,11 +9,18 @@ export const BombasContainer = styled.section`
        width: 360px;
        margin: 50px auto 90px;
         }  
+        @media (min-width: 768px) and (max-width: 1024px) {
+   width: 100%;
+}
 `
 
 export const Bombas = styled.div`
     display: flex;
     flex-direction: column;
+    @media (min-width: 320px) and (max-width: 480px) {
+        align-items: center;
+        justify-content: center;
+        }  
 `
 
 export const ContainerBomba = styled.div`
@@ -24,6 +31,9 @@ export const ContainerBomba = styled.div`
      margin-bottom: 0px;
      position: relative;
         }  
+        @media (min-width: 768px) and (max-width: 1024px) {
+   justify-content: space-evenly;
+    }
 `
 
 export const NomeBomba = styled.div`
@@ -140,6 +150,9 @@ export const SetaPrecoIcon = styled.img`
     @media (min-width: 320px) and (max-width: 480px) {
        display: none;
         }  
+        @media (min-width: 768px) and (max-width: 1024px) {
+ width: 240px;
+    }
 `
 
 export const DivContato = styled.div<HeaderUlProps>`
@@ -159,6 +172,9 @@ export const DivContato = styled.div<HeaderUlProps>`
         z-index: 2000;
         top: 0;
         }  
+        @media (min-width: 768px) and (max-width: 1024px) {
+   width: 294px;
+    }
 `
 
 export const ContatoContainer = styled.div`
@@ -234,6 +250,9 @@ width: 20px;
 export const InformacoesBombas = styled.div`
 display: flex;
 flex-direction: column; 
+@media (min-width: 768px) and (max-width: 1024px) {
+  margin-left: 30px;
+}
 `
 
 export const InformacoesTitulo = styled.p`
@@ -257,6 +276,8 @@ flex-wrap: wrap;
    flex-direction: column;
    width: 100%;
         }  
+
+
 `
 
 export const IconeSelect = styled.img`
@@ -277,6 +298,9 @@ export const VideoDemonstracao = styled.div`
     height: 100%;
     flex-direction: column;
     margin-top: 40px;
+    @media (min-width: 768px) and (max-width: 1024px) {
+  margin-left: 30px;
+}
 `
 
 export const VideoDemonstacaoTitulo = styled.p`

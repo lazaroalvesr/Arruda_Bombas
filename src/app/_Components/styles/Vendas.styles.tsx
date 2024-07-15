@@ -7,7 +7,7 @@ export const VendasContainer = styled.div`
     gap: 26px;
     @media (min-width: 320px) and (max-width: 480px) {
        flex-direction: column;
-       margin: 0px;
+       margin: 40px auto;
         }  
      @media (min-width: 768px) and (max-width: 1024px) {
     margin-left: 30px;

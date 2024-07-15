@@ -90,7 +90,6 @@ export const HeaderLi = styled.li`
     display: flex;
     gap: 40px;
     font-family: var(--type-poppins-regular);
-    font-weight: 400;
     font-weight: normal;
     cursor: pointer;
     font-size: 16px;
