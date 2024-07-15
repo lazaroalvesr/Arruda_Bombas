@@ -1,13 +1,18 @@
 'use client'
 
 import Galeria from "@/app/_Components/GaleriaFotos";
-import { Aviso, BombaNome, BombaPreco, Bombas, BombasContainer, BombasContainerInfo, BombasInfo, ButtonDiv, ButtonEnviar, CloseModal, ContainerBomba, ContatoContainer, ContatoNomeInput, ContatoTextArea, DivContato, DivIconeMobile, EmailMobile, Form, IconeEmail, IconeMSG, IconeSelect, IconeTelefone, IconeZap, IconeZapMobile, InformacoesBombas, InformacoesItens, InformacoesTitulo, ItensText, NomeBomba, NomeContato, NumeroContato, SetaPrecoIcon, ZapMobile } from "@/app/_Components/styles/Bombas.styles"
+import { Aviso, BombaNome, Bombas, BombasContainer, BombasContainerInfo, BombasInfo, ButtonDiv, ButtonEnviar, CloseModal, ContainerBomba, ContatoContainer, ContatoNomeInput, ContatoTextArea, DivContato, DivIconeMobile, EmailMobile, Form, IconeEmail, IconeMSG, IconeSelect, IconeTelefone, IconeZap, IconeZapMobile, InformacoesBombas, InformacoesItens, InformacoesTitulo, ItensText, NomeBomba, NomeContato, NumeroContato, SetaPrecoIcon, ZapMobile } from "@/app/_Components/styles/Bombas.styles"
 import Link from "next/link";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
+import emailjs from '@emailjs/browser'
 
 export default function PaginaCarretinhaRebocavel() {
 
     const [contato, setContato] = useState(false)
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [mensagem, setMensagem] = useState('')
+    const [celular, setCelular] = useState('');
 
     const nome = 'Carretinha Rebocável'
 
@@ -43,6 +48,28 @@ export default function PaginaCarretinhaRebocavel() {
     function toggleContato() {
         setContato(!contato)
     }
+    
+    function sendEmail(e: FormEvent) {
+        e.preventDefault()
+
+        const templateParams = {
+            from_name: name,
+            message: `${mensagem}\n\nEquipamento: ${nome}`,
+            email: email,
+            celular: celular
+        };
+
+        emailjs.send("service_1aw0p1n", "template_5q7b1ps", templateParams, "MUihn924koQBFDrhZ")
+            .then((response) => {
+                console.log('Email enviado', response.status, response.text);
+                setName('');
+                setEmail('');
+                setMensagem('');
+                setCelular('');
+            }, (err) => {
+                console.log('Erro:', err);
+            });
+    }
 
     return (
         <BombasContainer>
@@ -61,11 +88,30 @@ export default function PaginaCarretinhaRebocavel() {
                                 <ContatoContainer>
                                     <NomeContato>Entre em Contato</NomeContato>
                                     <NumeroContato><IconeTelefone src="/img/zap.png" />19 97410-5318</NumeroContato>
-                                    <Form>
-                                        <ContatoNomeInput placeholder="Nome" />
-                                        <ContatoNomeInput placeholder="Seu Email" />
-                                        <ContatoNomeInput placeholder="Seu telefone" />
-                                        <ContatoTextArea placeholder="Escreava sua mensagem aqui" />
+                                    <Form onSubmit={sendEmail}>
+                                        <ContatoNomeInput placeholder="Nome"
+                                            type="text"
+                                            onChange={(e) => setName(e.target.value)}
+                                            value={name}
+                                            required
+                                        />
+                                        <ContatoNomeInput placeholder="Número de Celular"
+                                            type="tel"
+                                            onChange={(e) => setCelular(e.target.value)}
+                                            value={celular}
+                                            required
+                                        />
+                                        <ContatoNomeInput placeholder="Seu Email"
+                                            type="email"
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            value={email}
+                                            required
+                                        />
+                                        <ContatoTextArea placeholder="Escreava sua mensagem aqui"
+                                            onChange={(e) => setMensagem(e.target.value)}
+                                            value={mensagem}
+                                            required
+                                        />
                                         <ButtonDiv>
                                             <ButtonEnviar><IconeMSG src="/img/msg.png" />Enviar mensagem</ButtonEnviar>
                                             <Link href={whatsappLink}>
@@ -81,7 +127,7 @@ export default function PaginaCarretinhaRebocavel() {
                 <InformacoesBombas>
                     <InformacoesTitulo>Especificações</InformacoesTitulo>
                     <InformacoesItens>
-                        {Itens.map((item,index) => (
+                        {Itens.map((item, index) => (
                             <ItensText key={index}>
                                 <IconeSelect src="/img/Select.png" />
                                 {item.nome}
