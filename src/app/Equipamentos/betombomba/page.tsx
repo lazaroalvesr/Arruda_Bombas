@@ -20,13 +20,13 @@ export default function PaginaBetonBomba() {
     const whatsappLink = `https://api.whatsapp.com/send?phone=5519974105318&text=${encodeURIComponent(message)}`;
 
     const images = [
-        { id: 1, images: "/img/Betonbomba/BetonBomba_1.png" },
-        { id: 2, images: "/img/Betonbomba/Betonbomba_2.png" },
-        { id: 3, images: "/img/Betonbomba/Betonbomba_3.png" },
-        { id: 4, images: "/img/Betonbomba/Betonbomba_4.png" },
-        { id: 5, images: "/img/Betonbomba/Betonbomba_5.png" },
-        { id: 6, images: "/img/Betonbomba/Betonbomba_6.png" },
-        { id: 7, images: "/img/Betonbomba/Betonbomba_7.png" },
+        { id: 1, images: "/img/Betonbomba/Beton_1.png" },
+        { id: 2, images: "/img/Betonbomba/Beton_2.png" },
+        { id: 3, images: "/img/Betonbomba/Beton_3.png" },
+        { id: 4, images: "/img/Betonbomba/Beton_4.png" },
+        { id: 5, images: "/img/Betonbomba/Beton_5.png" },
+        { id: 6, images: "/img/Betonbomba/Beton_6.png" },
+        { id: 7, images: "/img/Betonbomba/Beton_7.png" },
     ];
 
     const Itens = [
